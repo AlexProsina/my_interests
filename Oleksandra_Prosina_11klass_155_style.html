@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <title>Моя перша сторінка - Практична робота</title>
+  <style>
+    /* ТВОЇ ІСНУЮЧІ СТИЛІ */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
+    h1, h2, h3 {
+        color: #2c3e50;
+        text-align: center;
+    }
+    p {
+        line-height: 1.6;
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    img {
+        display: block;
+        margin: 0 auto; /* Змінено для image-box */
+        max-width: 100%;
+        border-radius: 10px;
+    }
+    .container {
+        max-width: 800px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+
+    /* НОВІ СТИЛІ З ПРАКТИЧНОЇ РОБОТИ */
+    /* 1. Інформаційна картка */
+    .card {
+        width: 300px;
+        padding: 20px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        transition: 0.3s;
+        margin: 20px auto;
+        position: relative; /* Потрібно для бейджа */
+        text-align: center;
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .card-btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 15px;
+        background-color: #0072ff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    /* 2. Декоративна мітка (бейдж) */
+    .badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: crimson;
+        color: white;
+        padding: 5px 10px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    /* 3. Розділювач */
+    .divider {
+        width: 80%;
+        height: 4px;
+        margin: 40px auto;
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+    }
+
+    /* 4. Hover-ефект для зображення */
+    .image-box { 
+        position: relative; 
+        width: 300px; 
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0,0,0,0.6);
+        color: white;
+        opacity: 0;
+        transition: 0.3s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+    .image-box:hover .overlay { 
+        opacity: 1; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Привіт, світ!</h1>
+    <p style="text-align: center;">Мене звати Олександра. Я навчаюсь у ліцеї N155, м.Київ. Я вивчаю HTML.</p>
+
+    <h2>Мої улюблені предмети:</h2>
+    <ul>
+      <li>Інформатика</li>
+      <li>Математика</li>
+      <li>Англійська мова</li>
+    </ul>
+
+    <p style="text-align: center;">Ось моє улюблене зображення (наведи на нього):</p>
+    
+    <div class="image-box">
+      <img src="https://picsum.photos/300" alt="Фото" />
+      <div class="overlay">Це красиве фото з сервісу<br>picsum.photos</div>
+    </div>
+
+    <div class="divider"></div>
+    <h2>Мої улюблені хобі</h2>
+    <ol>
+      <li>Читання</li>
+      <li>Спорт</li>
+      <li>Малювання</li>
+    </ol>
+
+    <p><b>Дякую за увагу!</b></p>
+
+    <div class="divider"></div>
+
+    <div class="card">
+      <span class="badge">NEW</span>
+      <h3>Моя перша HTML-сторінка</h3>
+      <p>Це коротка інформація про мене.</p>
+      <a href="#" class="card-btn">Вгору</a>
+    </div>
+  </div>
+
+</body>
+</html>
